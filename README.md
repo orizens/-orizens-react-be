@@ -37,6 +37,7 @@ function Example() {
 
 - [ ] support these elements with typescript: img
 - [ ] add support for multple values for special utilities (or all)
+- [ ] add built in utility-elements: Flex, Font, etc
 
 ## License
 
