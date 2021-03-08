@@ -69,7 +69,9 @@
   "directories": {
     "example": "example"
   },
-  "dependencies": {},
+  "dependencies": {
+    "react-code-blocks": "0.0.8"
+  },
   "keywords": [
     "react",
     "bootstrap"

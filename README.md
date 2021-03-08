@@ -1,6 +1,6 @@
 # @orizens/react-be
 
-> bootstrap element primitive component with utility classes and auto-completion - a la &#x27;styled&#x27; jsx, just with readable classes
+> Bootstrap Element is a primitive component with utility classes and auto-completion - a la &#x27;styled&#x27; jsx, just with readable classes
 
 [![NPM](https://img.shields.io/npm/v/@orizens/react-be.svg)](https://www.npmjs.com/package/@orizens/react-be) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
@@ -17,6 +17,10 @@ Make sure your project includes bootstrap.
 Bootstrap is still popular and along with that, react-bootstrap is as well.
 React-BE solves the problem of development experience and adds auto-completion for bootstrap utility functions.
 
+## DEMO
+
+https://orizens.github.io/-orizens-react-be/
+
 ## Usage
 
 ```tsx
@@ -28,6 +32,11 @@ function Example() {
   return <Be flex='row' overflow='auto' />
 }
 ```
+
+## Future Features
+
+- [ ] support these elements with typescript: img
+- [ ] add support for multple values for special utilities (or all)
 
 ## License
 
