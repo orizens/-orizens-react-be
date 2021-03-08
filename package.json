@@ -1,10 +1,13 @@
 {
   "name": "@orizens/react-be",
-  "version": "1.0.0",
-  "description": "bootstrap element primitive component with utility classes and auto-completion - a la &#x27;styled&#x27; jsx",
+  "version": "0.0.1",
+  "description": "bootstrap element primitive component with utility classes and auto-completion - a la &#x27;styled&#x27; jsx, just with readable classes",
   "author": "orizens",
   "license": "MIT",
-  "repository": "orizens/@orizens/react-be",
+  "repository": {
+    "type": "git",
+    "url": "orizens/@orizens/react-be"
+  },
   "main": "dist/index.js",
   "module": "dist/index.modern.js",
   "source": "src/index.tsx",
@@ -21,7 +24,8 @@
     "test:unit": "cross-env CI=1 react-scripts test --env=jsdom",
     "test:watch": "react-scripts test --env=jsdom",
     "predeploy": "cd example && npm install && npm run build",
-    "deploy": "gh-pages -d example/build"
+    "deploy": "gh-pages -d example/build",
+    "ts": "npx ts-node --project scripts/tsconfig.json scripts/create-types.ts"
   },
   "peerDependencies": {
     "react": "^16.0.0"
@@ -36,8 +40,8 @@
     "@types/react-dom": "^16.9.7",
     "@typescript-eslint/eslint-plugin": "^2.26.0",
     "@typescript-eslint/parser": "^2.26.0",
-    "microbundle-crl": "^0.13.10",
     "babel-eslint": "^10.0.3",
+    "bootstrap": "4.6.0",
     "cross-env": "^7.0.2",
     "eslint": "^6.8.0",
     "eslint-config-prettier": "^6.7.0",
@@ -50,14 +54,24 @@
     "eslint-plugin-react": "^7.17.0",
     "eslint-plugin-standard": "^4.0.1",
     "gh-pages": "^2.2.0",
+    "microbundle-crl": "^0.13.10",
     "npm-run-all": "^4.1.5",
     "prettier": "^2.0.4",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "^3.4.1",
+    "ts-node": "9.1.1",
     "typescript": "^3.7.5"
   },
   "files": [
     "dist"
+  ],
+  "directories": {
+    "example": "example"
+  },
+  "dependencies": {},
+  "keywords": [
+    "react",
+    "bootstrap"
   ]
 }
