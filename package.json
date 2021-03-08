@@ -6,7 +6,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "orizens/@orizens/react-be"
+    "url": "https://github.com/orizens/-orizens-react-be.git"
   },
   "main": "dist/index.js",
   "module": "dist/index.modern.js",
