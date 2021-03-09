@@ -2,50 +2,40 @@ import React, { useState } from 'react'
 import { CopyBlock, monokaiSublime } from 'react-code-blocks'
 
 import { Be } from '@orizens/react-be'
+import { Navbar } from './Navbar'
+import { Header } from './Header'
+import { Wave } from './Wave'
 
 const App = () => {
   const [user, setUser] = useState('')
   const toggleMessage = () => setUser('John')
   return (
-    <div className='container'>
-      <div className='main-body'>
-        <nav aria-label='breadcrumb' className='main-breadcrumb'>
-          <Be as='h1' text='center'>
-            React Bootstrap Element (BE)
-          </Be>
-        </nav>
+    <>
+      <Navbar />
+      <Header />
+      <Wave />
+      <div className='container'>
+        <div className='main-body'>
+          <nav aria-label='breadcrumb' className='main-breadcrumb'>
+            <Be as='h1' text='center' my='3' className='text-indigo'>
+              React Bootstrap Element (BE)
+            </Be>
+          </nav>
 
-        <Be d='flex' flex='column' align='items-center' className='gutters-sm'>
-          <div className='card'>
-            <div className='card-body'>
-              <Be d='flex' flex='column' align='items-center' text='center'>
-                <img
-                  src='https://bootdey.com/img/Content/avatar/avatar7.png'
-                  alt='Admin'
-                  className='rounded-circle'
-                  width='150'
-                />
-                <Be mt='3' onClick={toggleMessage}>
-                  <h4>John Doe</h4>
-                  <Be as='p' text='secondary' mb='1'>
-                    Front End Engineer, {user}
-                  </Be>
-                  <Be as='p' text='muted' className='font-size-sm'>
-                    Anywhere, Earth
-                  </Be>
-                  <button className='btn btn-primary'>Follow</button>
-                  <button className='btn btn-outline-primary'>Message</button>
-                </Be>
+          <Be d='flex' flex='row' align='items-start' className='gutters-sm'>
+            <Be col='8'>
+              <Be as='h4' text='dark'>
+                This card is coded with BE (bootstrap element):
               </Be>
-              <h4>this card is coded with BE (bootstrap element):</h4>
               <CopyBlock
                 theme={monokaiSublime}
                 text={`
 <Be d='flex' flex='column' align='items-center' text='center'>
-  <img
+  <Be
+    as='img'
     src='https://bootdey.com/img/Content/avatar/avatar7.png'
     alt='Admin'
-    className='rounded-circle'
+    rounded='circle'
     width='150'
   />
   <Be mt='3' onClick={toggleMessage}>
@@ -64,8 +54,37 @@ const App = () => {
                 language='jsx'
                 wrapLines
               />
-            </div>
-          </div>
+            </Be>
+
+            <Be col='4'>
+              <div className='card'>
+                <div className='card-body'>
+                  <Be d='flex' flex='column' align='items-center' text='center'>
+                    <Be
+                      as='img'
+                      src='https://bootdey.com/img/Content/avatar/avatar7.png'
+                      alt='Admin'
+                      rounded='circle'
+                      width='150'
+                    />
+                    <Be mt='3' onClick={toggleMessage}>
+                      <h4>John Doe</h4>
+                      <Be as='p' text='secondary' mb='1'>
+                        Front End Engineer, {user}
+                      </Be>
+                      <Be as='p' text='muted' className='font-size-sm'>
+                        Anywhere, Earth
+                      </Be>
+                      <button className='btn btn-primary'>Follow</button>
+                      <button className='btn btn-outline-primary'>
+                        Message
+                      </button>
+                    </Be>
+                  </Be>
+                </div>
+              </div>
+            </Be>
+          </Be>
           <div className='card mt-3'>
             <ul className='list-group list-group-flush'>
               <li className='list-group-item d-flex justify-content-between align-items-center flex-wrap'>
@@ -142,14 +161,22 @@ const App = () => {
               </li>
             </ul>
           </div>
-        </Be>
-        <Be as='footer' d='flex' flex='row' p='3' justify='content-center'>
-          <a href='https://www.bootdey.com/snippets/view/profile-with-data-and-skills'>
-            Design By bootdey.com
-          </a>
-        </Be>
+
+          <Be as='footer' d='flex' flex='row' p='3' justify='content-center'>
+            Design By:
+            <a
+              href='https://www.bootdey.com/snippets/view/profile-with-data-and-skills'
+              className='mr-2'
+            >
+              bootdey.com
+            </a>
+            <a href='https://demos.onepagelove.com/html/tivo/'>
+              onepagelove.com
+            </a>
+          </Be>
+        </div>
       </div>
-    </div>
+    </>
   )
 }
 
