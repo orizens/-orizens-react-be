@@ -1,2 +1,0 @@
-(this["webpackJsonp@orizens/react-be-example"]=this["webpackJsonp@orizens/react-be-example"]||[]).push([[60],{141:function(e,t,n){"use strict";function s(e){e.languages.ini={comment:/^[ \t]*[;#].*$/m,selector:/^[ \t]*\[.*?\]/m,constant:/^[ \t]*[^\s=]+?(?=[ \t]*=)/m,"attr-value":{pattern:/=.*/,inside:{punctuation:/^[=]/}}}}e.exports=s,s.displayName="ini",s.aliases=[]}}]);
-//# sourceMappingURL=react-syntax-highlighter_languages_refractor_ini.0b9dd060.chunk.js.map
