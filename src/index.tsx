@@ -2,7 +2,10 @@ import * as React from 'react'
 // eslint-disable-next-line no-unused-vars
 import { BeProps, ruleSet } from './index.types'
 
-interface Props extends React.HTMLAttributes<any>, BeProps {
+interface Props
+  extends React.HTMLAttributes<HTMLElement>,
+    React.ImgHTMLAttributes<HTMLElement>,
+    BeProps {
   // non bootstrap
   as?: string | React.FC
   children?: React.ReactNode | React.ReactNodeArray

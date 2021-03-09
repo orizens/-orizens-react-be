@@ -144,6 +144,7 @@ export interface BeProps {
     | 'break'
     | 'reset'
   w: '25' | '50' | '75' | '100' | 'auto'
+  img: 'fluid' | 'thumbnail'
   mr:
     | '0'
     | '1'
@@ -263,6 +264,7 @@ export const ruleSet = new Set([
   'shadow',
   'text',
   'w',
+  'img',
   'mr',
   'ml',
   'mt',
