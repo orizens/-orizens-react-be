@@ -1,4 +1,4 @@
-const ruleFilters = ['::before', '::after']
+const ruleFilters = ['::before', '::after', ',']
 export const isRulveValidToParse = (rule: string) => {
   return rule && !ruleFilters.some((filter: string) => rule.includes(filter))
 }

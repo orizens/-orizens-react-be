@@ -28,7 +28,7 @@ const utilList = [
   // 'user-select',
   'w',
   'img',
-  // 'col',
+  'col',
   // 'justify-content',
   ...createVariations('m'),
   ...createVariations('p')

@@ -12,6 +12,7 @@ function transform(utilsMap: UtilsRegex): string[] {
         ?.filter(isRulveValidToParse)
         .map((rule: string) => formatRule(rule, prefix))
         .filter(Boolean)
+
       const uniqueValues = new Set(ruleValues)
       return [...acc, `${prefix}: '${[...uniqueValues].join("' | '")}';`]
     },

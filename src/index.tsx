@@ -15,12 +15,17 @@ export const Be = ({
   as = 'div',
   role,
   children,
+  className: htmlClassName,
   ...props
 }: Partial<Props>) => {
   const { className, otherProps } = parseProps(props)
+  const classNameTrimmed = className?.trim()
+  const classNames = [classNameTrimmed || null, htmlClassName || null]
+    .filter(Boolean)
+    .join(' ')
   return React.createElement(
     as,
-    { ...otherProps, className: className?.trim() || null, role } as any,
+    { ...otherProps, className: classNames || null, role } as any,
     children
   )
 }

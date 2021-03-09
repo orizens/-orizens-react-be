@@ -145,6 +145,23 @@ export interface BeProps {
     | 'reset'
   w: '25' | '50' | '75' | '100' | 'auto'
   img: 'fluid' | 'thumbnail'
+  col:
+    | 'auto'
+    | '1'
+    | '2'
+    | '3'
+    | '4'
+    | '5'
+    | '6'
+    | '7'
+    | '8'
+    | '9'
+    | '10'
+    | '11'
+    | '12'
+    | 'form-label'
+    | 'form-label-lg'
+    | 'form-label-sm'
   mr:
     | '0'
     | '1'
@@ -265,6 +282,7 @@ export const ruleSet = new Set([
   'text',
   'w',
   'img',
+  'col',
   'mr',
   'ml',
   'mt',

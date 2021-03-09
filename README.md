@@ -36,6 +36,8 @@ function Example() {
 ## Future Features
 
 - [x] support these elements with typescript: img
+- [x] support column size
+- [ ] support responsive variations (i.e, flex-md-column, col-md-2)
 - [ ] add support for mulitple values for special utilities (or all)
 - [ ] add built in utility-elements: Flex, Font, etc
 
