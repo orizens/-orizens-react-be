@@ -3,6 +3,7 @@ import { UtilsRegex, utils } from './config'
 import { isRulveValidToParse, formatRule } from './utils'
 import { getCssRuleVariationsFor } from './css.loader'
 import { compileTemplate } from './template.compiler'
+import { renderFile } from './renderFile'
 
 function transform(utilsMap: UtilsRegex): string[] {
   const bootstrapInterface = Object.entries(utilsMap).reduce(
@@ -21,11 +22,10 @@ function transform(utilsMap: UtilsRegex): string[] {
   return bootstrapInterface
 }
 // console.log(transform(utils).join('\n'))
-console.log(
-  compileTemplate(
-    transform(utils)
-      .map((def) => `${def}\n`)
-      .join(''),
-    `['${Object.keys(utils).join("','")}']`
-  )
+const result = compileTemplate(
+  transform(utils)
+    .map((def) => `${def}\n`)
+    .join(''),
+  `['${Object.keys(utils).join("','")}']`
 )
+renderFile(result)

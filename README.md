@@ -26,12 +26,35 @@ https://orizens.github.io/-orizens-react-be/
 ```tsx
 import React, { Component } from 'react'
 
-import { Be } from '@orizens/react-be'
+import { Be, Row, H4, Section, Flex, Div, Ol, Li } from '@orizens/react-be'
 
 function Example() {
-  return <Be flex='row' overflow='auto' />
+  return (
+    <Section>
+      <H4 text='dark'>React-BE</H4>
+      <Column col='10'>
+        <Be flex='row' overflow='auto'>react-be is a time saver</Be>
+        <Flex flex='row'>
+          <Div>
+            <Ol>
+              <Li>there are more elements - with FULL Typescript support</Li>
+              <Li>more elements are coming soon...</Li>
+            </Ol>
+          </Div>
+        </Flex>
+      </Column>
+    </Section>
+  )
 }
 ```
+
+## Support HTML-Elements powered by React-BE
+
+these are the elements that are available with React-Be typings:
+
+Flex, Column, Row, P, Img, Li, on, Div, Section, Ol, Ul, Span, H1, H2, H3, H4, H5, H6
+
+more to come.
 
 ## Future Features
 
@@ -39,7 +62,8 @@ function Example() {
 - [x] support column size
 - [ ] support responsive variations (i.e, flex-md-column, col-md-2)
 - [ ] add support for mulitple values for special utilities (or all)
-- [ ] add built in utility-elements: Flex, Font, etc
+- [x] add built in utility-elements: Flex, Column, Row, P, Img, Li, on, Div, Section, Ol, Ul, Span, H1, H2, H3, H4, H5, H6
+- [ ] add more built in utility/html-elements: b, em, nav, footer, a, etc..
 
 ## License
 
