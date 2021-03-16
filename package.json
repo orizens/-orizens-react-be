@@ -1,6 +1,6 @@
 {
   "name": "@orizens/react-be",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "bootstrap element primitive component with utility classes and auto-completion - a la &#x27;styled&#x27; jsx, just with readable classes",
   "author": "orizens",
   "license": "MIT",
