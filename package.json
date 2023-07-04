@@ -71,7 +71,7 @@
     "example": "example"
   },
   "dependencies": {
-    "react-code-blocks": "0.0.8"
+    "react-code-blocks": "0.1.0"
   },
   "keywords": [
     "react",
